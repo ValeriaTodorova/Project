@@ -22,13 +22,13 @@ if(empty($_POST['submit'])){
 //var_dump($row);
 //form is exactly the same as in create.php
 //MIND THE VALUES!!! AND HIDDEN INPUT TYPE
-	echo "<h3>Edit the answer</h3>";
+	echo "<h3>Редактирай отговор</h3>";
 	echo "<form action='update_ans.php' method='post'>";
 	//! we need it to transfer the id of the updated row
 	echo "<input type='hidden' name='id_answer' value=".$row['id_answer'].">";
 //city_name!!! same as in the DB!!!
 	echo "<input type='text' class='form-control' name='answer' value='".$row['answer']."'>";
-	echo "<input type='submit' name='submit' value='update' class='btn btn-default'>";
+	echo "<input type='submit' name='submit' value='Редактирай' class='btn btn-default'>";
 	echo "</form>";
 }else {
 	//UPDATE QUERY CODE AS FOLLOWS

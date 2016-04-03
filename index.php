@@ -19,18 +19,18 @@ if(empty($_POST['submit'])){
 		<div class="form-group">
 		<label for="inputEmail4" class="col-sm-4 control-label">Username</label>
 		<div class="col-sm-5">
-			<input type='text' class='form-control' name='username' placeholder="username">
+			<input type='text' class='form-control' name='username' placeholder="Потребителско име">
 		</div>
 		</div>
 		<div class="form-group">
 		<label for="inputPassword5" class="col-sm-4 control-label">Password</label>
 		<div class="col-sm-5">
-		<input type='password' class='form-control'id="inputPassword3" name='password' placeholder="password">
+		<input type='password' class='form-control'id="inputPassword3" name='password' placeholder="парола">
 		</div>
 		</div>
 		<div class="form-group">
 		<div class="col-sm-offset-4 col-sm-5 ">
-			<input type='submit' name='submit' value='Sign up' class='btn btn-default'>
+			<input type='submit' name='submit' value='Регистрация' class='btn btn-default'>
 		</div>
 		</div>
 	</form>

@@ -22,13 +22,13 @@ if(empty($_POST['submit'])){
 //var_dump($row);
 //form is exactly the same as in create.php
 //MIND THE VALUES!!! AND HIDDEN INPUT TYPE
-	echo "<h3>Edit the category</h3>";
+	echo "<h3>Редактиране на категория</h3>";
 	echo "<form action='update.php' method='post'>";
 	//! we need it to transfer the id of the updated row
 	echo "<input type='hidden' name='id_category' value=".$row['id_category'].">";
 //city_name!!! same as in the DB!!!
 	echo "<input type='text' class='form-control' name='name_of_category' value='".$row['name_of_category']."'>";
-	echo "<input type='submit' name='submit'  value='update' class='btn btn-default'>";
+	echo "<input type='submit' name='submit'  value='Редактирай' class='btn btn-default'>";
 	echo "</form>";
 }else {
 	//UPDATE QUERY CODE AS FOLLOWS
@@ -54,6 +54,7 @@ if(empty($_POST['submit'])){
 		echo "<p><a href='#'>link to somewhere ... </a></p>";
 	}
 }
+			
 ?>
 <?php
 include_once('includes/footer.php')

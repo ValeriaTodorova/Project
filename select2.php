@@ -11,7 +11,7 @@ $conn = mysqli_connect('localhost', 'root', '', 'bulgarian_language');
 				
 
 	echo "<form action='create_ans.php' method='post'>";
-	echo "<h3>Questions</h3>";
+	echo "<h3>Въпроси</h3>";
 	echo "<select class='form-control' name='question'>";
 	$read_result = mysqli_query($conn, $select_query);
 	if (mysqli_num_rows($read_result) > 0) {
@@ -19,7 +19,7 @@ $conn = mysqli_connect('localhost', 'root', '', 'bulgarian_language');
 	echo "<option  value=".$row['id_question'].">".$row['question']."</option>";	
 	}}			
 	echo "</select>";
-	echo "<p><input type='submit' name='enter' value='insert' class='btn btn-default'></p>";
+	echo "<p><input type='submit' name='enter' value='Въведи' class='btn btn-default'></p>";
 	echo "</form>";
 ?>
 <?php

@@ -14,16 +14,16 @@ $conn = mysqli_connect('localhost', 'root', '', 'bulgarian_language');
 if(empty($_POST['submit'])){
 	$id_question=$_POST['question'];
 
-	echo "<h3>Insert new answer </h3>";
+	echo "<h3>Въведете отговор</h3>";
 	echo "<form action='create_ans.php' method='post'>";
 //city_name!!! same as in the DB!!!
 	echo "<input type='hidden' name='id_question' value='$id_question'>" ;
 	echo "<textarea class='form-control' rows='5' name='answer' rows='10' cols='50'></textarea>";
-	echo "<h6>For correct answer enter 0, for wrong answer enter 1</h6>";
+	echo "<h6>За правилен отговор въведете  0, за грешен 1</h6>";
 	echo "<input type='text' name='correct' value=''>";
 	echo "<h6>Enter position from 1 to 3</h6>";
 	echo "<input type='text' name='position' value=''>";
-	echo "<p><input type='submit' name='submit' value='insert'></p>";
+	echo "<p><input type='submit' name='submit' value='Въведи'></p>";
 	echo "</form>";
 }
 else{
@@ -52,8 +52,8 @@ else{
 			}
 
 }
-				echo "<p><a href='create_questions.php' class='btn btn-default'>Create question</a></p>";
-				echo "<p><a href='create.php' class='btn btn-default'>Back to category</a></p>";
+				echo "<p><a href='create_questions.php' class='btn btn-default'>Създаване на въпрос</a></p>";
+				echo "<p><a href='create.php' class='btn btn-default'>Назад към категориите</a></p>";
 /*$position_a = range(0,3);
 shuffle($position_a);
 $insert_query = 	"INSERT INTO answers (position) 

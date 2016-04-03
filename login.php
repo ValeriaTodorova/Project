@@ -16,15 +16,15 @@ $conn = mysqli_connect('localhost', 'root', '', 'bulgarian_language');
 	
 	<form action='login.php' method='post' class='form-horizontal'>
 		<div class="form-group">
-		<label for="inputEmail4" class="col-sm-4 control-label">Username</label>
+		<label for="inputEmail4" class="col-sm-4 control-label">Потребителско име</label>
 		<div class="col-sm-5">
-			<input type='text' class='form-control' name='username' placeholder="username">
+			<input type='text' class='form-control' name='username' placeholder="Потребителско име">
 		</div>
 		</div>
 		<div class="form-group">
-		<label for="inputPassword5" class="col-sm-4 control-label">Password</label>
+		<label for="inputPassword5" class="col-sm-4 control-label">Парола</label>
 		<div class="col-sm-5">
-		<input type='password' class='form-control'id="inputPassword3" name='password' placeholder="password">
+		<input type='password' class='form-control'id="inputPassword3" name='password' placeholder="Парола">
 		</div>
 		</div>
 		<div class="form-group">
@@ -60,7 +60,7 @@ elseif($row['role'] ==0){
 }
 }
 else {
-	echo "Wrong";
+	echo "Грешка";
 }
 //or table
 //echo "<ul>";

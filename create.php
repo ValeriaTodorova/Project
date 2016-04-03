@@ -10,11 +10,11 @@ $conn = mysqli_connect('localhost', 'root', '', 'bulgarian_language');
 // 	echo "Connected successfully !";
 // 	}
 if(empty($_POST['submit'])){
-	echo "<h3>Insert new category </h3>";
+	echo "<h3>Въведете нова категория </h3>";
 	echo "<form action='create.php' method='post'>";
 //city_name!!! same as in the DB!!!
 	echo "<p><input type='text' class='form-control' placeholder='New category here' name='name_of_category'></p>";
-	echo "<p><input type='submit' name='submit' value='insert' class='btn btn-default'></p>";
+	echo "<p><input type='submit' name='submit' value='Въведи' class='btn btn-default'></p>";
 	echo "</form>";
 }
 else{
@@ -39,9 +39,9 @@ else{
 }
 
 
-				echo "<p><a href='create_questions.php' class='btn btn-default'>Create question</a></p>";
-				echo "<p><a href='create_ans.php' class='btn btn-default'>Create answer</a></p>";
-				echo "<p><a href='create.php' class='btn btn-default'>Back to category</a></p>";
+				echo "<p><a href='create_questions.php' class='btn btn-default'>Създаване на Въпрос</a></p>";
+				echo "<p><a href='select1.php' class='btn btn-default'>Създаване на отговор</a></p>";
+				echo "<p><a href='create.php' class='btn btn-default'>Назад към категориите</a></p>";
 ?>
 
 

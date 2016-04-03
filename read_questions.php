@@ -14,7 +14,7 @@ $read_query = 	"SELECT * FROM questions
 				WHERE date_deleted IS NULL";
 $read_result = mysqli_query($conn, $read_query);
 //or table
-echo "<h3>Choose question to modify</h3>";
+echo "<h3>Промяна на въпрос</h3>";
 //echo "<ul class='new'>";
 echo "<table>";
 echo "<tr>";
@@ -25,10 +25,9 @@ echo "<tr>";
 		echo "<td> ".$row['question']."</td>";
 		//echo '<li class="new">'.$row['question'];
 		//for U D purpose we need update and delete buttons/links
-		//we also need $row['id_city'] to know exactly which row of the table to 
-		//update or to delete
-		echo '<td> '.'<a href="update_questions.php?id='.$row['id_question'].'" class="btn btn-warning btn-xs">Edit</a></td>';// kriene na id
-		echo '<td> '.'<a href="delete_questions.php?id='.$row['id_question'].'" class="btn btn-danger btn-xs">Delete</a></td>';
+		
+		echo '<td> '.'<a href="update_questions.php?id='.$row['id_question'].'" class="btn btn-warning btn-xs">Редактирай</a></td>';// kriene na id
+		echo '<td> '.'<a href="delete_questions.php?id='.$row['id_question'].'" class="btn btn-danger btn-xs">Изтрий</a></td>';
 		//echo '</li>';
 		echo "</tr>";
 
@@ -38,8 +37,8 @@ echo "<tr>";
 	echo "</table>";
 
 //echo "</ul>";
-				echo "<p><a href='create_ans.php' class='btn btn-default'>Create answer</a></p>";
-				echo "<p><a href='create.php' class='btn btn-default'>Back to category</a></p>";
+				echo "<p><a href='select1.php' class='btn btn-default'>Създаване на отговор</a></p>";
+				echo "<p><a href='create.php' class='btn btn-default'>Назад към категориите</a></p>";
 
 ?>
 

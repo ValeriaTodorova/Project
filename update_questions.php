@@ -22,13 +22,13 @@ if(empty($_POST['submit'])){
 //var_dump($row);
 //form is exactly the same as in create.php
 //MIND THE VALUES!!! AND HIDDEN INPUT TYPE
-	echo "<h3>Edit the question</h3>";
+	echo "<h3>Редактирай въпрос</h3>";
 	echo "<form action='update_questions.php' method='post'>";
 	//! we need it to transfer the id of the updated row
 	echo "<input type='hidden' name='id_question' value=".$row['id_question'].">";
 //city_name!!! same as in the DB!!!
 	echo "<input type='text' class='form-control'  name='question' value='".$row['question']."'>";
-	echo "<input type='submit' name='submit' value='update' class='btn btn-default'>";
+	echo "<input type='submit' name='submit' value='Редактирай' class='btn btn-default'>";
 	echo "</form>";
 }else {
 	//UPDATE QUERY CODE AS FOLLOWS
@@ -54,8 +54,8 @@ if(empty($_POST['submit'])){
 		echo "<p><a href='#'>link to somewhere ... </a></p>";
 	}
 }
-				echo "<p><a href='create_ans.php'class='btn btn-default'>Create answer</a></p>";
-				echo "<p><a href='create.php' class='btn btn-default'>Back to category</a></p>";
+				echo "<p><a href='select1.php'class='btn btn-default'>Създаване на въпрос</a></p>";
+				echo "<p><a href='create.php' class='btn btn-default'>Назад към категориите</a></p>";
 ?>
 <?php
 include_once('includes/footer.php')

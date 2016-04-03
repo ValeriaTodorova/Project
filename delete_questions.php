@@ -14,14 +14,9 @@ $date = date('Y-m-d');
 //echo $date;
 $delete_query = "UPDATE questions SET date_deleted ='$date' WHERE id_question=$id_question";
 $delete_result = mysqli_query($conn, $delete_query);
-//IT IS A GOOD PRACTICE TO BE INFORMED IF YOU HAVE DELETED OR NOT 
-//YOU ALREADY KNOW ABOUT THE FOLLOWING CODE
+
 if ($delete_result) {
- 				//success code can be read db query - 
- 				//you can print the entire info + your newly update db query 
-		
- 				//it depends on you and UI you have designed ...
- 				//the same is with unseccess code
+ 				
  				//IT IS A GOOD PRACTICE YOU AND USER TO KNOW EXACTLY WHAT THE RESULT IS - SUCCESS OR NOT
 		echo "<h3>Успешно изтрихте запис в базата данни!</h3>";
 		echo "<p><a href='read_questions.php'>Read DB</a></p>";
@@ -29,8 +24,8 @@ if ($delete_result) {
 		echo "<h3>Неуспешно изтриване на запис в базата данни! Моля опитайте по-късно!</h3>";
 		//echo "<p><a href='#'>link to somewhere ... </a></p>";
 	}
-	echo "<p><a href='create_ans.php' class='btn btn-default'>Create answer</a></p>";
-				echo "<p><a href='create.php' class='btn btn-default'>Back to category</a></p>";
+	echo "<p><a href='select1.php' class='btn btn-default'>Създаване на въпрос</a></p>";
+				echo "<p><a href='create.php' class='btn btn-default'>Назад към категориите</a></p>";
 ?>
 <?php
 include_once('includes/footer.php')

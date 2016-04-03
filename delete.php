@@ -17,11 +17,7 @@ $delete_result = mysqli_query($conn, $delete_query);
 //IT IS A GOOD PRACTICE TO BE INFORMED IF YOU HAVE DELETED OR NOT 
 //YOU ALREADY KNOW ABOUT THE FOLLOWING CODE
 if ($delete_result) {
- 				//success code can be read db query - 
- 				//you can print the entire info + your newly update db query 
-		
- 				//it depends on you and UI you have designed ...
- 				//the same is with unseccess code
+ 				
  				//IT IS A GOOD PRACTICE YOU AND USER TO KNOW EXACTLY WHAT THE RESULT IS - SUCCESS OR NOT
 		echo "<h3>Успешно изтрихте запис в базата данни!</h3>";
 		echo "<p><a href='read.php'>Read DB</a></p>";
@@ -30,8 +26,8 @@ if ($delete_result) {
 		//echo "<p><a href='#'>link to somewhere ... </a></p>";
 	}
 
-				echo "<p><a href='create_questions.php' class='btn btn-default'>Create question</a></p>";
-				echo "<p><a href='create_ans.php' class='btn btn-default'>Create answer</a></p>";
+				echo "<p><a href='create_questions.php' class='btn btn-default'>Създаване на въпрос</a></p>";
+				echo "<p><a href='select1.php' class='btn btn-default'>Създаване на отговор</a></p>";
 ?>
 
 
