@@ -15,7 +15,7 @@ if(empty($_POST['submit'])){
 
 	?>
 
-	<form action='login.php' method='post' class='form-horizontal'>
+	<form action='index.php' method='post' class='form-horizontal'>
 		<div class="form-group">
 		<label for="inputEmail4" class="col-sm-4 control-label">Username</label>
 		<div class="col-sm-5">
@@ -57,7 +57,7 @@ else{
 				//the same with unseccess code=
 				echo "Успешно добавихте $username в базата данни!";
 				//echo "<p><a href='read.php'>Read DB</a></p>";
-				echo "<a href='login.php'>Log In</a>";
+				echo "<a href='login.php'>Вход</a>";
 			}else{
 				echo "Неуспешно добавяне на запис в базата данни! Моля опитайте по-късно!";
 			}

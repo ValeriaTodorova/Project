@@ -28,6 +28,7 @@ if ($delete_result) {
 
 				echo "<p><a href='create_questions.php' class='btn btn-default'>Създаване на въпрос</a></p>";
 				echo "<p><a href='select1.php' class='btn btn-default'>Създаване на отговор</a></p>";
+				echo "<p><a href='create.php' class='btn btn-default'>Към категориите</a></p>";
 ?>
 
 

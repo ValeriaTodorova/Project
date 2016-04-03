@@ -23,7 +23,7 @@ if(empty($_POST['submit'])){
 	echo "<input type='text' name='correct' value=''>";
 	echo "<h6>Enter position from 1 to 3</h6>";
 	echo "<input type='text' name='position' value=''>";
-	echo "<p><input type='submit' name='submit' value='Въведи'></p>";
+	echo "<input type='submit' name='submit' value='Въведи'>";
 	echo "</form>";
 }
 else{
@@ -52,6 +52,7 @@ else{
 			}
 
 }
+				echo "<p><a href='select1.php' class='btn btn-default'>Създай отговор</a></p>";
 				echo "<p><a href='create_questions.php' class='btn btn-default'>Създаване на въпрос</a></p>";
 				echo "<p><a href='create.php' class='btn btn-default'>Назад към категориите</a></p>";
 /*$position_a = range(0,3);

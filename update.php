@@ -54,6 +54,8 @@ if(empty($_POST['submit'])){
 		echo "<p><a href='#'>link to somewhere ... </a></p>";
 	}
 }
+
+echo "<p><a href='create.php' class='btn btn-default'>Към категориите</a></p>";
 			
 ?>
 <?php

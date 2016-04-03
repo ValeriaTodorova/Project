@@ -42,17 +42,17 @@ else {
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 	$password = md5($password);
-	var_dump($username);
+	
 
 $read_query = 	"SELECT * FROM users 
 				WHERE username = '$username'";
 $read_result = mysqli_query($conn, $read_query);
 $row = mysqli_fetch_assoc($read_result);
-var_dump($row);
+//var_dump($row);
 if($row['password'] === $password){
 if($row['role'] == 1){
 	header('Location: admin.php');
-	echo $read_query;
+	
 }
 elseif($row['role'] ==0){
 	header('Location: user.php');
@@ -60,7 +60,7 @@ elseif($row['role'] ==0){
 }
 }
 else {
-	echo "Грешка";
+	echo "<div class='alert alert-danger' role='alert'>Грешна парола или потребителско име!!!</div>";
 }
 //or table
 //echo "<ul>";

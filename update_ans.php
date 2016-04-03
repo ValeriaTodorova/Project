@@ -54,8 +54,8 @@ if(empty($_POST['submit'])){
 		echo "<p><a href='#'>link to somewhere ... </a></p>";
 	}
 }
-echo "<p><a href='create_questions.php' class='btn btn-default'>Create question</a></p>";
-				echo "<p><a href='create.php' class='btn btn-default'>Back to category</a></p>";
+echo "<p><a href='create_questions.php' class='btn btn-default'>Създай въпрос</a></p>";
+				echo "<p><a href='create.php' class='btn btn-default'>Към категориите</a></p>";
 ?>
 <?php
 include_once('includes/footer.php')

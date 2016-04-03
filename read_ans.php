@@ -14,7 +14,7 @@ $read_query = 	"SELECT * FROM answers
 				WHERE date_deleted IS NULL";
 $read_result = mysqli_query($conn, $read_query);
 //or table
-echo "<h3>Промяна на въпрос</h3>";
+echo "<h3>Промяна на отговор</h3>";
 //echo "<ul class='new'>";
 echo "<table>";
 	if (mysqli_num_rows($read_result) > 0) {
@@ -31,6 +31,7 @@ echo "<table>";
 	}
 	echo "</table>";
 //echo "</ul>";
+				echo "<p><a href='select1.php' class='btn btn-default'>Създаване на отговор</a></p>";
 				echo "<p><a href='create_questions.php' class='btn btn-default '>Създаване на въпрос</a></p>";
 				echo "<p><a href='create.php' class='btn btn-default'>Назад към категориите</a></p>";
 ?>

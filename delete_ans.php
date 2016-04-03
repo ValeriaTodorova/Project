@@ -19,7 +19,7 @@ if ($delete_result) {
  				
  				//IT IS A GOOD PRACTICE YOU AND USER TO KNOW EXACTLY WHAT THE RESULT IS - SUCCESS OR NOT
 		echo "<h3>Успешно изтрихте запис в базата данни!</h3>";
-		echo "<p><a href='read.php'>Read DB</a></p>";
+		echo "<p><a href='read_ans.php'>Read DB</a></p>";
 	}else{
 		echo "<h3>Неуспешно изтриване на запис в базата данни! Моля опитайте по-късно!</h3>";
 		//echo "<p><a href='#'>link to somewhere ... </a></p>";

@@ -13,7 +13,7 @@ if(empty($_POST['submit'])){
 	echo "<h3>Въведете нова категория </h3>";
 	echo "<form action='create.php' method='post'>";
 //city_name!!! same as in the DB!!!
-	echo "<p><input type='text' class='form-control' placeholder='New category here' name='name_of_category'></p>";
+	echo "<p><input type='text' class='form-control' placeholder='Въведи категория' name='name_of_category'></p>";
 	echo "<p><input type='submit' name='submit' value='Въведи' class='btn btn-default'></p>";
 	echo "</form>";
 }
@@ -41,7 +41,7 @@ else{
 
 				echo "<p><a href='create_questions.php' class='btn btn-default'>Създаване на Въпрос</a></p>";
 				echo "<p><a href='select1.php' class='btn btn-default'>Създаване на отговор</a></p>";
-				echo "<p><a href='create.php' class='btn btn-default'>Назад към категориите</a></p>";
+				
 ?>
 
 

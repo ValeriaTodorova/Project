@@ -24,9 +24,10 @@ if ($delete_result) {
 		echo "<h3>Неуспешно изтриване на запис в базата данни! Моля опитайте по-късно!</h3>";
 		//echo "<p><a href='#'>link to somewhere ... </a></p>";
 	}
+	echo "<p><a href='select1.php' class='btn btn-default'>Създаване на отговор</a></p>";
 	echo "<p><a href='select1.php' class='btn btn-default'>Създаване на въпрос</a></p>";
-				echo "<p><a href='create.php' class='btn btn-default'>Назад към категориите</a></p>";
+	echo "<p><a href='create.php' class='btn btn-default'>Назад към категориите</a></p>";
 ?>
 <?php
-include_once('includes/footer.php')
+include_once('includes/footer.php') 
 ?>

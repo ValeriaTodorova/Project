@@ -10,7 +10,7 @@ if(empty($_POST['submit'])){
 	echo "<h3>Въведете въпрос</h3>";
 	echo "<form action='create_questions.php' method='post'>";
 
-	echo "<h5>Категории,</h5>";
+	echo "<h5>Категории</h5>";
 	echo "<p><select class='form-control' name='categories'></p>";
 	$read_query = 	"SELECT * FROM categories 
 					WHERE date_deleted IS NULL ";
@@ -23,7 +23,7 @@ if(empty($_POST['submit'])){
 
 
 	echo "<p><textarea class='form-control' rows='5' placeholder='Въведете въпрос' name='question' rows='9' cols='50' value='Въведете въпрос' ></textarea></p>";
-	echo "<p><input type='submit' name='Въведи' value='insert'></p>";
+	echo "<p><input type='submit' name='submit' value='Въведи'></p>";
 	echo "</form>";
 }
 else{
@@ -34,13 +34,13 @@ else{
 	$insert_query = 	"INSERT INTO questions (question,id_category) 
 						VALUES ('$question','$category')";
 
-	echo $insert_query;
+	
 			
 			$insert_result= mysqli_query($conn, $insert_query);
 			if ($insert_result) {
 				
 				echo "Успешно добавихте $question в базата данни!";
-				echo "<p><a href='read_question.php'>Read DB</a></p>";
+				echo "<p><a href='read_questions.php'>Read DB</a></p>";
 			}else{
 				echo "Неуспешно добавяне на запис в базата данни! Моля опитайте по-късно!";
 			}
