@@ -21,7 +21,7 @@
 <ul>
 <li><a href="index.php" class="btn btn-primary btn-sm active" role="button"> Начало</a></li>
 <li><a href="login.php" class="btn btn-primary btn-sm active" role="button"> Вход</a></li>
-<li><a href="test_list.php" class="btn btn-primary btn-sm active" role="button"> Тестове</a></li>
+<li><a href="create.php" class="btn btn-primary btn-sm active" role="button"> Тестове</a></li>
 
 <li><a href="index.php" class="btn btn-primary btn-sm active" role="button"> Изход</a></li>
 </ul>

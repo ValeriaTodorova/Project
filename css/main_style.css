@@ -50,14 +50,26 @@ h1{
 	font-family: verdana, "Times New Roman", Serif;
 	font-weight: bold;
 }
-
+h3{
+	font-family: verdana, "Times New Roman", Serif;
+	font-weight: bold;
+	color: #5A90B9;
+}
 h4{
 	font-family: verdana, "Times New Roman", Serif;
 	font-weight: bold;
 }
 
+h6{
+	color: red;
+}
+
 ul{
 	text-align: right;
+}
+.new{
+	text-align: left;
+	display: block;
 }
 li{
 	display: inline-block;
@@ -87,4 +99,11 @@ footer{
 
 img{
 	margin-left: 300px;
+}
+
+table{
+	border: 2px solid black;
+	border-radius: 5px;
+	border-collapse: separate;
+    border-spacing: 10px 30px;
 }

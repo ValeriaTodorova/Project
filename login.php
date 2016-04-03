@@ -11,16 +11,31 @@ $conn = mysqli_connect('localhost', 'root', '', 'bulgarian_language');
  // 	}
  	if(empty($_POST['submit'])){
 
+?>
 
 	
-	echo "<form action='login.php' method='post'>";
-//city_name!!! same as in the DB!!!
-	echo "<p><input type='text' name='username'></p>";
-	echo "<p><input type='password' name='password'></p>";
+	<form action='login.php' method='post' class='form-horizontal'>
+		<div class="form-group">
+		<label for="inputEmail4" class="col-sm-4 control-label">Username</label>
+		<div class="col-sm-5">
+			<input type='text' class='form-control' name='username' placeholder="username">
+		</div>
+		</div>
+		<div class="form-group">
+		<label for="inputPassword5" class="col-sm-4 control-label">Password</label>
+		<div class="col-sm-5">
+		<input type='password' class='form-control'id="inputPassword3" name='password' placeholder="password">
+		</div>
+		</div>
+		<div class="form-group">
+		<div class="col-sm-offset-4 col-sm-5 ">
+			<input type='submit' name='submit' value='Log In' class='btn btn-default'>
+		</div>
+		</div>
+	</form>
 
-	echo "<p><input type='submit' name='submit' value='Log in'></p>";
-	echo "</form>";
 
+<?php
 
 }
 else {
@@ -37,6 +52,7 @@ var_dump($row);
 if($row['password'] === $password){
 if($row['role'] == 1){
 	header('Location: admin.php');
+	echo $read_query;
 }
 elseif($row['role'] ==0){
 	header('Location: user.php');

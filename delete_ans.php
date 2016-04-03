@@ -1,3 +1,6 @@
+<?php
+include_once('includes/header.php')
+?>
 <?php 
 $conn = mysqli_connect('localhost', 'root', '', 'bulgarian_language');
 // if (!$conn) {
@@ -20,11 +23,17 @@ if ($delete_result) {
  				//it depends on you and UI you have designed ...
  				//the same is with unseccess code
  				//IT IS A GOOD PRACTICE YOU AND USER TO KNOW EXACTLY WHAT THE RESULT IS - SUCCESS OR NOT
-		echo "Успешно изтрихте запис в базата данни!";
+		echo "<h3>Успешно изтрихте запис в базата данни!</h3>";
 		echo "<p><a href='read.php'>Read DB</a></p>";
 	}else{
-		echo "Неуспешно изтриване на запис в базата данни! Моля опитайте по-късно!";
-		echo "<p><a href='#'>link to somewhere ... </a></p>";
+		echo "<h3>Неуспешно изтриване на запис в базата данни! Моля опитайте по-късно!</h3>";
+		//echo "<p><a href='#'>link to somewhere ... </a></p>";
 	}
-	echo "<p><a href='create_questions.php'>Create question</a></p>";
-				echo "<p><a href='create.php'>Back to category</a></p>";
+	echo "<p><a href='create_questions.php' class='btn btn-default'>Create question</a></p>";
+				echo "<p><a href='create.php' class='btn btn-default'>Back to category</a></p>";
+?>
+
+
+<?php
+include_once('includes/footer.php')
+?>

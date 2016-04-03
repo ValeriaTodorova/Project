@@ -1,3 +1,7 @@
+
+<?php
+include_once('includes/header.php')
+?>
 <?php 
 $conn = mysqli_connect('localhost', 'root', '', 'bulgarian_language');
 // if (!$conn) {
@@ -6,11 +10,11 @@ $conn = mysqli_connect('localhost', 'root', '', 'bulgarian_language');
 // 	echo "Connected successfully !";
 // 	}
 if(empty($_POST['submit'])){
-	echo "<p>Insert new category </p>";
+	echo "<h3>Insert new category </h3>";
 	echo "<form action='create.php' method='post'>";
 //city_name!!! same as in the DB!!!
-	echo "<input type='text' name='name_of_category'>";
-	echo "<input type='submit' name='submit' value='insert'>";
+	echo "<p><input type='text' class='form-control' placeholder='New category here' name='name_of_category'></p>";
+	echo "<p><input type='submit' name='submit' value='insert' class='btn btn-default'></p>";
 	echo "</form>";
 }
 else{
@@ -35,5 +39,12 @@ else{
 }
 
 
-				echo "<p><a href='create_questions.php'>Create question</a></p>";
-				echo "<p><a href='create_ans.php'>Create answer</a></p>";
+				echo "<p><a href='create_questions.php' class='btn btn-default'>Create question</a></p>";
+				echo "<p><a href='create_ans.php' class='btn btn-default'>Create answer</a></p>";
+				echo "<p><a href='create.php' class='btn btn-default'>Back to category</a></p>";
+?>
+
+
+<?php
+include_once('includes/footer.php')
+?>

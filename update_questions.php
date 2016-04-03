@@ -1,4 +1,7 @@
 <?php
+include_once('includes/header.php')
+?>
+<?php
 //you can include the db connection code in separate file
 //and include this file
 $conn = mysqli_connect('localhost', 'root', '', 'bulgarian_language');
@@ -19,13 +22,13 @@ if(empty($_POST['submit'])){
 //var_dump($row);
 //form is exactly the same as in create.php
 //MIND THE VALUES!!! AND HIDDEN INPUT TYPE
-	echo "<p>Edit the question</p>";
+	echo "<h3>Edit the question</h3>";
 	echo "<form action='update_questions.php' method='post'>";
 	//! we need it to transfer the id of the updated row
 	echo "<input type='hidden' name='id_question' value=".$row['id_question'].">";
 //city_name!!! same as in the DB!!!
-	echo "<input type='text' name='question' value='".$row['question']."'>";
-	echo "<input type='submit' name='submit' value='update'>";
+	echo "<input type='text' class='form-control'  name='question' value='".$row['question']."'>";
+	echo "<input type='submit' name='submit' value='update' class='btn btn-default'>";
 	echo "</form>";
 }else {
 	//UPDATE QUERY CODE AS FOLLOWS
@@ -51,5 +54,9 @@ if(empty($_POST['submit'])){
 		echo "<p><a href='#'>link to somewhere ... </a></p>";
 	}
 }
-				echo "<p><a href='create_ans.php'>Create answer</a></p>";
-				echo "<p><a href='create.php'>Back to category</a></p>";
+				echo "<p><a href='create_ans.php'class='btn btn-default'>Create answer</a></p>";
+				echo "<p><a href='create.php' class='btn btn-default'>Back to category</a></p>";
+?>
+<?php
+include_once('includes/footer.php')
+?>

@@ -1,3 +1,7 @@
+<?php
+include_once('includes/header.php')
+?>
+
 <?php 
 $conn = mysqli_connect('localhost', 'root', '', 'bulgarian_language');
 // if (!$conn) {
@@ -5,16 +9,21 @@ $conn = mysqli_connect('localhost', 'root', '', 'bulgarian_language');
 // 	} else {
 // 	echo "Connected successfully !";
 // 	}
+
+
 if(empty($_POST['submit'])){
-	echo "<p>Insert new answer </p>";
+	$id_question=$_POST['question'];
+
+	echo "<h3>Insert new answer </h3>";
 	echo "<form action='create_ans.php' method='post'>";
 //city_name!!! same as in the DB!!!
-	echo "<textarea name='answer' rows='10' cols='50'></textarea>";
-	echo "<p>correct answer = 0; wrong answer = 1</p>";
+	echo "<input type='hidden' name='id_question' value='$id_question'>" ;
+	echo "<textarea class='form-control' rows='5' name='answer' rows='10' cols='50'></textarea>";
+	echo "<h6>For correct answer enter 0, for wrong answer enter 1</h6>";
 	echo "<input type='text' name='correct' value=''>";
-	echo "<p>position from 1 to 3</p>";
+	echo "<h6>Enter position from 1 to 3</h6>";
 	echo "<input type='text' name='position' value=''>";
-	echo "<input type='submit' name='submit' value='insert'>";
+	echo "<p><input type='submit' name='submit' value='insert'></p>";
 	echo "</form>";
 }
 else{
@@ -23,10 +32,11 @@ else{
 	$answer = $_POST['answer'];
 	$correct=$_POST['correct'];
 	$position=$_POST['position'];
+	$id_question=$_POST['id_question'];
 	
 		//you can shorten var names - $insert_query - $q or smth else
-	$insert_query = 	"INSERT INTO answers (answer,correct,position) 
-						VALUES ('$answer','$correct','$position')";
+	$insert_query = 	"INSERT INTO answers (answer,correct,position,id_question) 
+						VALUES ('$answer','$correct','$position',$id_question)";
 			//or $result
 			$insert_result= mysqli_query($conn, $insert_query);
 			if ($insert_result) {
@@ -42,13 +52,15 @@ else{
 			}
 
 }
-				echo "<p><a href='create_questions.php'>Create question</a></p>";
-				echo "<p><a href='create.php'>Back to category</a></p>";
+				echo "<p><a href='create_questions.php' class='btn btn-default'>Create question</a></p>";
+				echo "<p><a href='create.php' class='btn btn-default'>Back to category</a></p>";
 /*$position_a = range(0,3);
 shuffle($position_a);
 $insert_query = 	"INSERT INTO answers (position) 
 						VALUES ('$position_a')";*/
-
-
+?>
+<?php
+include_once('includes/footer.php')
+?>
 
 
